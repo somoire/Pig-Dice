@@ -3,3 +3,28 @@ body {
   font-style: bold;
   text-align: center;
 }
+
+h1 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  float: left;
+  text-decoration: underline;
+  text-indent: inherit;
+  font-style: italic;
+  font-family: sans-serif;
+  background-color: gold
+}
+ol {
+  background-image: url("../Img/Thedie.jpg");
+  font-family: monospace;
+  color: red
+}
+h2 {
+  text-decoration: underline;
+  text-indent: inherit;
+  font-style: italic;
+  font-family: fantasy;
+  background-image: url("../Img/pigdie.jpg");
+}

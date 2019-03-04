@@ -12,29 +12,33 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <h1><strong> Pig-Dice </strong></h1>
+      <div>
+       <h1><strong> Pig-Dice </strong></h1>
 
         <h2>.. RULES OF THE GAME ..</h2>
-        <ul>
+        <ol>
           <li> The game has two players, playing in rounds </li>
           <li> In each turn, a player roles a dice as many times as he wishes. Each rusult obtained is then added to his round score </li>
           <li> <strong>BUT, </strong>if either of the players on his/her turn roles the dice and obtains a one, all his/her ROUND score is summed up to 0 or gets lost. Afterwards it becomes the next player's turn  </li>
           <li> The player can choose to "HOLD", which rather means the obtained round score is added to his current score and it becomes the other players turn or can continue to roll the die untill satisfied </li>
           <li> The first player to reach an overall score of 100 points becomes the winner .. :-) </li>
 
+        </ol>
+
+
+
           <div class="player-console">
 
                   <div class="jumbotron">
                     <div class = "row">
                     <div class="col-md-6">
-                      <h2>Player 1: <span id = "player1Name"><span></h2>sv
+                      <h2>Player 1: <span id = "player1Name"><span></h2>
 
                         <br>
                         <br>
-                          <button onclick="display" id="player1-roll" class="btn">Roll</button>
-                          <button onclick="display" id="player1-hold" class="btn">Hold</button>
-                      <h2>Dice Roll: <span id="dice-roll-1"></span></h2>
+                          <button onclick="display()" id="player1-roll" class="btn">Roll</button>
+                          <button onclick="display()" id="player1-hold" class="btn">Hold</button>
+                      <h3>Dice Roll: <span id="dice-roll-1"></span></h3>
                       <p>Round Total: <span id="round-total-1"></span></p>
                       <p>Total Score: <span id="total-score-1"></span></p>
                     </div>
@@ -44,12 +48,14 @@
 
                       <br>
                       <br>
-                          <button onclick="display" id="player2-roll" class="btn">Roll</button>
-                          <button onclick="display" id="player2-hold" class="btn">Hold</button>
-                      <h2>Dice Roll: <span id="dice-roll-2"></span></h2>
+                          <button onclick="display()" id="player2-roll" class="btn">Roll</button>
+                          <button onclick="display()" id="player2-hold" class="btn">Hold</button>
+                      <h4>Dice Roll: <span id="dice-roll-2"></span></h4>
                       <p>Round Total: <span id="round-total-2"></span></p>
                       <p>Total Score: <span id="total-score-2"></span></p>
                   </div>
+
+                  <button onclick="restart()" id="newGame" class="btn">! NEW GAME !</button>
                 </div>
                   </div>
                 </div>
