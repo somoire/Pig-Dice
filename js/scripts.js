@@ -1,16 +1,16 @@
 // business logic
-var firstPlayer;
-var secondPlayer;
+var firstPlayer = {};
+var secondPlayer = {};
 
 var rollDice=function() {
-  return Math.floor(6*Math.random()) + 1
+  return Math.floor(6*Math.random()) + 1;
 }
 
-function User(turn) {
+function User() {
   this.roll = 0;
   this.roundTotal = 0;
   this.totalScore = 0;
-  this.turn = nextplayer.Math.floor(2*Math.random()) + 1;
+  //nextplayer.Math.floor(2*Math.random()) + 1;
 };
 
 
@@ -20,7 +20,7 @@ User.prototype.rollOne = function() {
     this.roundTotal = 0;
     alert("next player's turn!" + " You rolled a 1!")
   } else {
-    this.totalScore += this.roll;
+    this.roundTotal += this.roll;
   }
 }
 // Hold functionality
@@ -46,35 +46,35 @@ User.prototype.newGame = function() {
 // front end
 $("document").ready(function(){
 $("#newGame").click(function(){
-firstPlayer = new User;
-secondPlayer = new User;
 $("dice-roll-1, #round-total-1, #total-score-1, #dice-roll-2, #round-total-2, #total-score-2").empty();
 });
-
-$("button #player1-roll").click(function () {
+firstPlayer = new User();
+secondPlayer = new User();
+$("button#player1-roll").click(function () {
   firstPlayer.roll = rollDice();
-  $("dice-roll-1").text(firstPlayer.roll);
+  $("#dice-roll-1").text(firstPlayer.roll);
   firstPlayer.rollOne();
   $("#round-total-1").text(firstPlayer.roundTotal);
 });
 
 $("button#player1-hold").click(function () {
-  firstPlayer.Hold;
-  $("total-score-1").text(firstPlayer.totalScore);
-  $("dice-roll-1, #round-total-1").empty();
+  firstPlayer.Hold();
+  $("#total-score-1").text(firstPlayer.totalScore);
+  $("#dice-roll-1").empty();
+  $("#round-total-1").empty();
 })
 
-$("button #player2-roll").click(function () {
-  firstPlayer.roll = rollDice();
-  $("dice-roll-2").text(firstPlayer.roll);
-  firstPlayer.rollOne();
-  $("#round-total-2").text(firstPlayer.roundTotal);
+$("button#player2-roll").click(function () {
+  secondPlayer.roll = rollDice();
+  $("#dice-roll-2").text(secondPlayer.roll);
+  secondPlayer.rollOne();
+  $("#round-total-2").text(secondPlayer.roundTotal);
 });
 
 $("button#player2-hold").click(function () {
-  firstPlayer.Hold;
-  $("total-score-2").text(firstPlayer.totalScore);
-  $("dice-roll-1, #round-total-1").empty();
+  secondPlayer.Hold();
+  $("#total-score-2").text(secondPlayer.totalScore);
+  $("#dice-roll-2, #round-total-2").empty();
 })
 
 $("button#newGame").click(function () {
