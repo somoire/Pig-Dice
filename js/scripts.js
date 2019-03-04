@@ -24,7 +24,7 @@ User.prototype.rollOne = function() {
   }
 }
 // Hold functionality
-User.prototype.hold = function() {
+User.prototype.Hold = function() {
   this.totalScore += this.roundTotal;
   this.roundTotal = 0;
   alert("Next players turn!!");
@@ -45,7 +45,7 @@ User.prototype.newGame = function() {
 
 // front end
 $("document").ready(function(){
-$("#newGame").click(function restart(){
+$("#newGame").click(function(){
 firstPlayer = new User;
 secondPlayer = new User;
 $("dice-roll-1, #round-total-1, #total-score-1, #dice-roll-2, #round-total-2, #total-score-2").empty();
@@ -59,7 +59,7 @@ $("button #player1-roll").click(function () {
 });
 
 $("button#player1-hold").click(function () {
-  firstPlayer.hold();
+  firstPlayer.Hold;
   $("total-score-1").text(firstPlayer.totalScore);
   $("dice-roll-1, #round-total-1").empty();
 })
@@ -72,9 +72,13 @@ $("button #player2-roll").click(function () {
 });
 
 $("button#player2-hold").click(function () {
-  firstPlayer.hold();
+  firstPlayer.Hold;
   $("total-score-2").text(firstPlayer.totalScore);
   $("dice-roll-1, #round-total-1").empty();
+})
+
+$("button#newGame").click(function () {
+
 })
 
 });

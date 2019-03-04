@@ -24,7 +24,7 @@ ol {
 h2 {
   text-decoration: underline;
   text-indent: inherit;
-  font-style: italic;
+  font-style: none;
   font-family: fantasy;
-  background-image: url("../Img/pigdie.jpg");
+  background-color: red:
 }
