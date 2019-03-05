@@ -46,7 +46,7 @@ User.prototype.newGame = function() {
 // front end
 $("document").ready(function(){
 $("#newGame").click(function(){
-$("dice-roll-1, #round-total-1, #total-score-1, #dice-roll-2, #round-total-2, #total-score-2").empty();
+$("#dice-roll-1, #round-total-1, #total-score-1, #dice-roll-2, #round-total-2, #total-score-2").empty();
 });
 firstPlayer = new User();
 secondPlayer = new User();
