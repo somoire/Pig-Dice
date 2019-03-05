@@ -12,10 +12,13 @@
   <body>
     <div class="container">
       <div>
-        <div class="well"
+
                <h1><strong> Pig-Dice </strong></h1>
-        </div>
+<div class="well">
         <h2>.. RULES OF THE GAME ..</h2>
+      </div>
+
+
         <ol>
           <li> The game has two players, playing in rounds </li>
           <li> In each turn, a player roles a dice as many times as he wishes. Each rusult obtained is then added to his round score </li>
@@ -25,37 +28,46 @@
 
         </ol>
 
-
+<button id="newGame" class="btn">! NEW GAME !</button>
 
           <div class="player-console">
 
                   <div class="jumbotron">
                     <div class = "row">
                     <div class="col-md-6">
+                      <div class="play1">
                       <h3>Player 1: <span id = "player1Name"><span></h3>
 
                         <br>
                         <br>
+
+
                           <button id="player1-roll" class="btn">Roll</button>
                           <button id="player1-hold" class="btn">Hold</button>
+
                       <h3>Dice Roll: <span id="dice-roll-1"></span></h3>
                       <p>Round Total: <span id="round-total-1"></span></p>
                       <p>Total Score: <span id="total-score-1"></span></p>
                     </div>
+                    </div>
 
                   <div class="col-md-6">
+                    <div class="play2">
                     <h3>Player 2: <span id = "player2"><span></h3>
 
                       <br>
                       <br>
+
                           <button id="player2-roll" class="btn">Roll</button>
                           <button id="player2-hold" class="btn">Hold</button>
+
                       <h4>Dice Roll: <span id="dice-roll-2"></span></h4>
                       <p>Round Total: <span id="round-total-2"></span></p>
                       <p>Total Score: <span id="total-score-2"></span></p>
                   </div>
+                  </div>
 
-                  <button id="newGame" class="btn">! NEW GAME !</button>
+
                 </div>
                   </div>
                 </div>

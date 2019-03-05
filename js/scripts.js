@@ -28,6 +28,9 @@ User.prototype.Hold = function() {
   this.totalScore += this.roundTotal;
   this.roundTotal = 0;
   alert("Next players turn!!");
+  if(this.totalScore >= 100) {
+    alert("you have won");
+  }
 }
 // Winner checking functionality
 User.prototype.winner = function() {
@@ -62,6 +65,8 @@ $("button#player1-hold").click(function () {
   $("#total-score-1").text(firstPlayer.totalScore);
   $("#dice-roll-1").empty();
   $("#round-total-1").empty();
+  $(".play1").hide();
+  $(".play2").show();
 })
 
 $("button#player2-roll").click(function () {
@@ -75,6 +80,8 @@ $("button#player2-hold").click(function () {
   secondPlayer.Hold();
   $("#total-score-2").text(secondPlayer.totalScore);
   $("#dice-roll-2, #round-total-2").empty();
+  $(".play2").hide();
+  $(".play1").show();
 })
 
 $("button#newGame").click(function () {
