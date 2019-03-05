@@ -85,7 +85,7 @@ $("button#player2-hold").click(function () {
 })
 
 $("button#newGame").click(function () {
-player.winner = rollDice();
+
 })
 
 });
